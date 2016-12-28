@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.roberto.calculadoraimc.MainActivity"
+    android:weightSum="1"
+    android:background="@color/colorPrimary"
+    android:animateLayoutChanges="false"
+    android:backgroundTintMode="multiply">
+
+    <Button
+        android:text="@string/texto_botonIMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/boton_calcula_IMC"
+        android:fontFamily="serif"
+        android:textSize="18sp"
+        android:layout_marginBottom="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="@string/peso"
+        android:id="@+id/literal_peso"
+        android:fontFamily="serif"
+        style="none"
+        android:textSize="17sp"
+        android:layout_width="120dp"
+        android:textColor="@android:color/background_light"
+        android:textColorHighlight="@android:color/holo_orange_light"
+        android:textColorHint="@android:color/holo_orange_light"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/estatura"
+        android:id="@+id/literal_estatura"
+        android:fontFamily="serif"
+        style="none"
+        android:textSize="17sp"
+        android:layout_width="wrap_content"
+        android:textColor="@android:color/background_light"
+        android:textColorHighlight="@android:color/holo_orange_light"
+        android:textColorHint="@android:color/holo_orange_light"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/literal_peso"
+        android:layout_alignBottom="@+id/literal_peso"
+        android:layout_alignLeft="@+id/boton_calcula_IMC"
+        android:layout_alignStart="@+id/boton_calcula_IMC"
+        android:layout_marginLeft="87dp"
+        android:layout_marginStart="87dp" />
+
+    <EditText
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/caja_estatura"
+        android:layout_weight="0.40"
+        android:inputType="numberDecimal"
+        android:textColor="@android:color/background_light"
+        android:layout_alignBottom="@+id/literal_estatura"
+        android:layout_toRightOf="@+id/literal_estatura"
+        android:layout_toEndOf="@+id/literal_estatura"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp" />
+
+    <EditText
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/caja_peso"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/background_light"
+        android:layout_alignBottom="@+id/literal_peso"
+        android:layout_toRightOf="@+id/literal_peso"
+        android:layout_toEndOf="@+id/literal_peso"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp" />
+</RelativeLayout>

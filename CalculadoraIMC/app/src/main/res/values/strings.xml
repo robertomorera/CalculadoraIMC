@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CalculadoraIMC</string>
+    <string name="estatura">ESTATURA(m)</string>
+    <string name="peso">PESO(kg)</string>
+    <string name="texto_botonIMC">Calcula tu  IMC</string>
+    <string name="literal_IMC">Su IMC es:</string>
+    <string name="Desnutrido">Desnutrido</string>
+    <string name="BajoPeso">Bajo Peso</string>
+    <string name="Normal">Normal</string>
+    <string name="SobrePeso">Sobre Peso</string>
+    <string name="Obeso">Obeso</string>
+
+
+</resources>

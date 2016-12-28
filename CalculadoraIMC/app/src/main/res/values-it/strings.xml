@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CalculadoraIMC</string>
+    <string name="estatura">ALTEZZA(m)</string>
+    <string name="peso">PESO(kg)</string>
+    <string name="texto_botonIMC">Calcola il tuo BMI</string>
+    <string name="literal_IMC">Il tuo BMI è:</string>
+    <string name="Desnutrido">Denutrito</string>
+    <string name="BajoPeso">Sottopeso</string>
+    <string name="Normal">Normale</string>
+    <string name="SobrePeso">Sovrappeso</string>
+    <string name="Obeso">Obeso</string>
+
+
+
+</resources>
