@@ -13,10 +13,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Obtenemos la referencia del botón.
+        //Obtenemos la referencia del botón de cálculo de IMC.
         Button botonCalculaIMC=(Button)findViewById(R.id.boton_calcula_IMC);
         EscuchaBoton escuchaBoton=new EscuchaBoton(this);
         //Asignamos el listener al botón de calcular IMC
         botonCalculaIMC.setOnClickListener(escuchaBoton);
+        //Obtenemos la referencia del bóton de consultar rangos.
+        Button botonConsultaRangos=(Button)findViewById(R.id.boton_consulta_rangos);
+        //Creamos el listener asociado al botón.
+        ListenerRangosBoton listenerRangosBoton=new ListenerRangosBoton(this);
+        //Asignamos el Listener al botón de consulta de rangos.
+        botonConsultaRangos.setOnClickListener(listenerRangosBoton);
     }
 }

@@ -13,32 +13,67 @@
     android:animateLayoutChanges="false"
     android:backgroundTintMode="multiply">
 
-    <EditText
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/caja_IMC"
-        android:layout_marginBottom="200dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="24sp"
-        android:textColor="@android:color/background_light" />
+        android:orientation="horizontal"
+        android:layout_marginTop="34dp">
 
-    <TextView
-        android:text="@string/literal_IMC"
+        <TextView
+            android:text="@string/literal_IMC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/literal_IMC"
+            android:textColor="@android:color/background_light"
+            android:textColorHighlight="@android:color/holo_orange_light"
+            android:textColorHint="@android:color/holo_orange_light"
+            android:textSize="24sp"
+
+           />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/caja_IMC"
+            android:textSize="18sp"
+            android:textColor="@android:color/background_light"
+            android:layout_marginLeft="48dp"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/literal_IMC"
-        android:textColor="@android:color/background_light"
-        android:textColorHighlight="@android:color/holo_orange_light"
-        android:textColorHint="@android:color/holo_orange_light"
-        android:textSize="36sp"
-        android:layout_marginBottom="76dp"
-        android:layout_above="@+id/caja_IMC"
-        android:layout_alignLeft="@+id/caja_IMC"
-        android:layout_alignStart="@+id/caja_IMC"
-        android:layout_marginLeft="41dp"
-        android:layout_marginStart="41dp" />
+        android:orientation="horizontal"
+        android:layout_marginTop="200dp">
+
+        <TextView
+            android:text="@string/literal_Rango"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/literal_Rango"
+            android:textColor="@android:color/background_light"
+            android:textColorHighlight="@android:color/holo_orange_light"
+            android:textColorHint="@android:color/holo_orange_light"
+            android:textSize="24sp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/caja_Rango"
+            android:textSize="18sp"
+            android:layout_marginLeft="23dp"
+           />
+        />
+
+
+    </LinearLayout>
+
+
 </RelativeLayout>

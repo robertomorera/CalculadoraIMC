@@ -9,7 +9,15 @@
     <string name="Normal">Normale</string>
     <string name="SobrePeso">Sovrappeso</string>
     <string name="Obeso">Obeso</string>
-
+    <string name="hint_estatura">Altezza</string>
+    <string name="hint_peso">Peso</string>
+    <string name="literal_bajopeso">16=&lt;IMC&lt;18</string>
+    <string name="literal_desnutrido">IMC&lt;16</string>
+    <string name="literal_normal">18&lt;IMC&lt;25;</string>
+    <string name="literal_obeso">IMC&gt;=31</string>
+    <string name="literal_sobrepeso">25&lt;IMC&lt;31</string>
+    <string name="literal_Rango">La sua gamma è:</string>
+    <string name="texto_botonConsultaRangos">Gamme</string>
 
 
 </resources>

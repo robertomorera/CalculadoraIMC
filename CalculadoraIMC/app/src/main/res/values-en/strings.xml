@@ -9,6 +9,15 @@
     <string name="Normal">Normal</string>
     <string name="SobrePeso">Overweight</string>
     <string name="Obeso">Obese</string>
+    <string name="hint_estatura">Height</string>
+    <string name="hint_peso">Weight</string>
+    <string name="literal_bajopeso">16=&lt;IMC&lt;18</string>
+    <string name="literal_desnutrido">IMC&lt;16</string>
+    <string name="literal_normal">18&lt;IMC&lt;25</string>
+    <string name="literal_obeso">IMC&gt;=31</string>
+    <string name="literal_sobrepeso">25&lt;IMC&lt;31</string>
+    <string name="literal_Rango">Your Range is:</string>
+    <string name="texto_botonConsultaRangos">Ranges</string>
 
 
 </resources>

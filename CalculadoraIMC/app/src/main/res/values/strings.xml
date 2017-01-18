@@ -2,13 +2,21 @@
     <string name="app_name">CalculadoraIMC</string>
     <string name="estatura">ESTATURA(m)</string>
     <string name="peso">PESO(kg)</string>
-    <string name="texto_botonIMC">Calcula tu  IMC</string>
+    <string name="texto_botonIMC">Calcula IMC</string>
     <string name="literal_IMC">Su IMC es:</string>
     <string name="Desnutrido">Desnutrido</string>
     <string name="BajoPeso">Bajo Peso</string>
     <string name="Normal">Normal</string>
     <string name="SobrePeso">Sobre Peso</string>
     <string name="Obeso">Obeso</string>
-
+    <string name="hint_peso">Peso</string>
+    <string name="hint_estatura">Estatura</string>
+    <string name="texto_botonConsultaRangos">Rangos</string>
+    <string name="literal_Rango">Su Rango es:</string>
+    <string name="literal_desnutrido">IMC&lt;16</string>
+    <string name="literal_bajopeso">16=&lt;IMC&lt;18</string>
+    <string name="literal_normal">18&lt;IMC&lt;25</string>
+    <string name="literal_sobrepeso">25&lt;IMC&lt;31</string>
+    <string name="literal_obeso">IMC&gt;=31</string>
 
 </resources>
