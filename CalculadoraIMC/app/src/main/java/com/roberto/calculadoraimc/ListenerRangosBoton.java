@@ -1,9 +1,11 @@
 package com.roberto.calculadoraimc;
 
-import android.app.Activity;
+
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.View;
-import android.widget.ListView;
+
 
 /**
  * Created by PCCasa on 18/01/2017.
@@ -35,15 +37,11 @@ public class ListenerRangosBoton implements View.OnClickListener {
     @Override
     public void onClick(View v) {
 
-        //Obtenemos referencia de la actividad
-        Activity activity=(Activity)context;
-        //Fijamos el layout del ListView.
-        activity.setContentView(R.layout.lista);
-        //Obtenemos el ListView.
-        ListView listView=(ListView)activity.findViewById(R.id.lista_rangos);
-       ///Seteamos el adapter asociado al ListView.
-        listView.setAdapter(new ConsultaRangosAdapter(context));
-
+        //Creamos el Intent para pasar a la actividad de listar rangos.
+        Intent intent=new Intent(context,ListadoRangosActivity.class);
+        Log.d(getClass().getCanonicalName(),"Se inicia la actividad del Intent de listado de rangos");
+        //Lanzamos la actividad configurada en el Intent.
+        context.startActivity(intent);
 
     }
 }

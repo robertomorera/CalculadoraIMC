@@ -26,6 +26,9 @@ public class ConsultaRangosAdapter extends BaseAdapter {
 
     //Array con los literales de los rangos.
     private Integer[] listaRangos={R.string.literal_desnutrido,R.string.literal_bajopeso,R.string.literal_normal,R.string.literal_sobrepeso,R.string.literal_obeso};
+
+    //Array de descripciones de listados.
+    private Integer[] listaDescripcionRangos={R.string.Desnutrido,R.string.BajoPeso,R.string.Normal,R.string.SobrePeso,R.string.Obeso};
     /**
      * Constructor de la clase ConsultaRangosAdapter
      * @param context Contexto de la aplicacion
@@ -65,14 +68,19 @@ public class ConsultaRangosAdapter extends BaseAdapter {
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+       View filaInflada=null;
         Log.d(getClass().getCanonicalName(),"Entrada al método getView() se añade el elemento en la posición "+position);
         //Creamos la activity para poder recuperar el objeto LayoutInflater
-        Activity activity=(Activity)context;
-        //Obtenemos un objeto LayOutInflater.
-        LayoutInflater layoutInflater=activity.getLayoutInflater();
-        //Inflamos la vista.
-        View filaInflada=layoutInflater.inflate(R.layout.fila_rango,parent,false);
-        //Obtenemos los elementos que forman la fila para configurarlos.
+        if(convertView==null) {
+            Activity activity = (Activity) context;
+            //Obtenemos un objeto LayOutInflater.
+            LayoutInflater layoutInflater = activity.getLayoutInflater();
+            //Inflamos la vista.
+            filaInflada = layoutInflater.inflate(R.layout.fila_rango, parent, false);
+        }else{
+            filaInflada=convertView;
+        }
+            //Obtenemos los elementos que forman la fila para configurarlos.
         ImageView imagenRangoView=(ImageView)filaInflada.findViewById(R.id.imagenRango);
         //Insertamos la imagen correspondiente.
         imagenRangoView.setImageResource(galeriaImagenes[position]);
@@ -80,7 +88,11 @@ public class ConsultaRangosAdapter extends BaseAdapter {
         TextView textoRangoView=(TextView)filaInflada.findViewById(R.id.textoRango);
         //Fijamos el literal del rango en el textView
         textoRangoView.setText(listaRangos[position]);
+        //Asociamos el texto del rango a cada elemento;
+        filaInflada.setTag(listaDescripcionRangos[position]);
+        Log.d(getClass().getCanonicalName(),"Asociamos a la fila inflada el rango: "+listaDescripcionRangos[position]);
         //Devolvemos la fila inflada al ListView.
         return filaInflada;
+
     }
 }

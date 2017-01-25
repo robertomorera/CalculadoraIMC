@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ResultadoIMCActivity"></activity>
+        <activity android:name=".ResultadoIMCActivity" />
+        <activity android:name=".ListadoRangosActivity"></activity>
     </application>
 
 </manifest>

@@ -4,13 +4,15 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:id="@+id/fila_rango"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimary"
+    android:focusable="false" >
 
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:id="@+id/imagenRango"
         android:layout_alignParentLeft="true"
+        android:focusable="false"
 
         />
 
@@ -23,6 +25,7 @@
         android:layout_marginLeft="200dp"
         android:textColor="@android:color/background_light"
         android:textSize="17sp"
+        android:focusable="false"
 
         />
 
