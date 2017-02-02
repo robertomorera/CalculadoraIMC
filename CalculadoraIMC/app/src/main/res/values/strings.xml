@@ -18,5 +18,18 @@
     <string name="literal_normal">18&lt;IMC&lt;25</string>
     <string name="literal_sobrepeso">25&lt;IMC&lt;31</string>
     <string name="literal_obeso">IMC&gt;=31</string>
+    <string name="texto_botonLogin">Acceder</string>
+    <string name="texto_botonRegistro">Registrarse</string>
+    <string name="literal_usuario">Usuario</string>
+    <string name="hint_usuario">Usuario</string>
+    <string name="literal_contrasena">Contraseña</string>
+    <string name="hint_contrasena">Contraseña</string>
+    <string name="usuario_no_informado">Nombre de usuario no informado</string>
+    <string name="usuario_no_existe">El usuario no existe en BD se debe registrar</string>
+    <string name="contrasena_no_informada">Contraseña no informada</string>
+    <string name="usuario__existe">El usuario ya existe en la BD</string>
+    <string name="registro__correcto">Registrado en la app correctamente</string>
+    <string name="password__incorrecta">La contraseña introducida es incorrecta</string>
+    <string name="expulsion_app">Se ha superado los intentos de login permitidos se cierra la app</string>
 
 </resources>

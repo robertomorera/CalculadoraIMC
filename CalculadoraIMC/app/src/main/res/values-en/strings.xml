@@ -18,6 +18,19 @@
     <string name="literal_sobrepeso">25&lt;IMC&lt;31</string>
     <string name="literal_Rango">Your Range is:</string>
     <string name="texto_botonConsultaRangos">Ranges</string>
+    <string name="hint_contrasena">Password</string>
+    <string name="hint_usuario">User</string>
+    <string name="literal_contrasena">Password</string>
+    <string name="literal_usuario">User</string>
+    <string name="texto_botonLogin">Sing in</string>
+    <string name="texto_botonRegistro">Sing up</string>
+    <string name="usuario_no_informado">Field User is empty</string>
+    <string name="usuario_no_existe">User does not register in the database</string>
+    <string name="contrasena_no_informada">Field password is empty</string>
+    <string name="usuario__existe">The user is registered in the database</string>
+    <string name="registro__correcto">The user is registered succesfully</string>
+    <string name="password__incorrecta">The password is incorrect</string>
+    <string name="expulsion_app">The allowed login attempts have been exceeded, the app is closed</string>
 
 
 </resources>

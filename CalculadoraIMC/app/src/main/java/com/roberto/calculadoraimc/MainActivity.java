@@ -1,5 +1,7 @@
 package com.roberto.calculadoraimc;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -24,5 +26,17 @@ public class MainActivity extends AppCompatActivity {
         ListenerRangosBoton listenerRangosBoton=new ListenerRangosBoton(this);
         //Asignamos el Listener al botón de consulta de rangos.
         botonConsultaRangos.setOnClickListener(listenerRangosBoton);
+    }
+
+    @Override
+    public void onBackPressed() {
+        //Creamos una sharedPreferences del usuario;
+        //Al volver atras quitamos el logeo del usuario.
+        SharedPreferences sharedPreferences=getSharedPreferences("loginUsuario", Context.MODE_PRIVATE);
+        //Creamos una shared preferences para indicar que el usuario ya se ha logeado.
+        SharedPreferences.Editor editor=sharedPreferences.edit();
+        editor.putBoolean("usuarioLogeado",false);
+        editor.commit();
+        super.onBackPressed();
     }
 }
