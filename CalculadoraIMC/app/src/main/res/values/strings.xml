@@ -31,5 +31,12 @@
     <string name="registro__correcto">Registrado en la app correctamente</string>
     <string name="password__incorrecta">La contraseña introducida es incorrecta</string>
     <string name="expulsion_app">Se ha superado los intentos de login permitidos se cierra la app</string>
+    <string name="titulo_dialog_salir">Salir de la aplicación</string>
+    <string name="mensaje_dialog_salir">¿Desea salir de la aplicación?</string>
+    <string name="titulo_dialog_salirIMC">Cerrar sesion</string>
+    <string name="mensaje_dialog_salirIMC">¿Desea cerrar la sesion actual?</string>
+    <string name="literal_Si">Si</string>
+    <string name="literal_No">No</string>
+    <string name="rangos_IMC">Rangos IMC</string>
 
 </resources>

@@ -27,4 +27,5 @@ public class Constantes {
     public static final String MENSAJE_NAN="El IMC calculado es un NaN";
 
     public static final String MENSAJE_INFINITO="El IMC calculado es infinito";
+
 }

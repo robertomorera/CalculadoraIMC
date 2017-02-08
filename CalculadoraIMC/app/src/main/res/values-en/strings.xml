@@ -31,6 +31,12 @@
     <string name="registro__correcto">The user is registered succesfully</string>
     <string name="password__incorrecta">The password is incorrect</string>
     <string name="expulsion_app">The allowed login attempts have been exceeded, the app is closed</string>
+    <string name="titulo_dialog_salir">Exit to the application</string>
+    <string name="titulo_dialog_salirIMC">Close the session</string>
+    <string name="mensaje_dialog_salir">Do you want exit to the application?</string>
+    <string name="mensaje_dialog_salirIMC">Do you  want close the session?</string>
+    <string name="literal_No">No</string>
+    <string name="literal_Si">Yes</string>
 
 
 </resources>

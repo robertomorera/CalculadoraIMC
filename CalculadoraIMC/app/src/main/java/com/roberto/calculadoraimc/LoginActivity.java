@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 
 public class LoginActivity extends AppCompatActivity {
@@ -28,5 +29,13 @@ public class LoginActivity extends AppCompatActivity {
         //Obtenemos el botón de login a la app.
         Button botonAcceso=(Button)findViewById(R.id.boton_login);
         botonAcceso.setOnClickListener(listenerBotonRegistro);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Log.d(getClass().getCanonicalName(),"El usuario ha pulsado el boton atras se le pregunta si quiere salir de la aplicacion");
+        //Se muestra el alertDialog para preguntar si queremos salir de la app.
+        AlertDialogApp alertDialogApp= new AlertDialogApp(this);
+        alertDialogApp.getDialogSalirApp();
     }
 }
