@@ -1,4 +1,4 @@
-package com.roberto.calculadoraimc;
+package com.roberto.calculadoraimc.dialogs;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -7,6 +7,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.util.Log;
+
+import com.roberto.calculadoraimc.R;
 
 /**
  * Created by PCCasa on 07/02/2017.

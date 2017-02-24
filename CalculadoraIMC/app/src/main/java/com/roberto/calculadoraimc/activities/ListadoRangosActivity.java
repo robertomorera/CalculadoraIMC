@@ -1,9 +1,13 @@
-package com.roberto.calculadoraimc;
+package com.roberto.calculadoraimc.activities;
 
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
+
+import com.roberto.calculadoraimc.adapters.ConsultaRangosAdapter;
+import com.roberto.calculadoraimc.listeners.ListenerListadosRangos;
+import com.roberto.calculadoraimc.R;
 
 
 public class ListadoRangosActivity extends AppCompatActivity {

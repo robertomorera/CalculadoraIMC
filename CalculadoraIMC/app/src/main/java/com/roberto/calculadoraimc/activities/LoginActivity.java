@@ -1,4 +1,4 @@
-package com.roberto.calculadoraimc;
+package com.roberto.calculadoraimc.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,6 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+
+import com.roberto.calculadoraimc.dialogs.AlertDialogApp;
+import com.roberto.calculadoraimc.listeners.ListenerBotonesLogin;
+import com.roberto.calculadoraimc.R;
 
 public class LoginActivity extends AppCompatActivity {
 

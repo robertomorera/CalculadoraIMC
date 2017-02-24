@@ -1,4 +1,4 @@
-package com.roberto.calculadoraimc;
+package com.roberto.calculadoraimc.listeners;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,6 +6,10 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+
+import com.roberto.calculadoraimc.utilidades.Constantes;
+import com.roberto.calculadoraimc.R;
+import com.roberto.calculadoraimc.activities.ResultadoIMCActivity;
 
 /**
  * Created by PCCasa on 21/12/2016.
@@ -33,9 +37,11 @@ public class EscuchaBoton implements View.OnClickListener {
     @Override
     public void onClick(View v) {
 
-        Log.d(getClass().getCanonicalName(),Constantes.ACCION_BOTONIMC);
+        Log.d(getClass().getCanonicalName(), Constantes.ACCION_BOTONIMC);
         //Obtenemos referencia de la actividad
         Activity activity=(Activity)context;
+        //Obtenemos el nombre del usuario logeado.
+        String nombreUsuarioLogeado=activity.getIntent().getStringExtra("nombreUsuarioLogeado");
         //Obtenemos la referencia de las cajas de texto de peso y estatura.
         EditText cajaEstatura=(EditText)activity.findViewById(R.id.caja_estatura);
         EditText cajaPeso=(EditText)activity.findViewById(R.id.caja_peso);
@@ -46,9 +52,10 @@ public class EscuchaBoton implements View.OnClickListener {
         Log.d(getClass().getCanonicalName(),Constantes.LOG_PESO_INTRODUCIDO+peso);
         //Creamos el objeto Intent para indicar la acción de inicio de la actividad de calculo de IMC (ResultadoIMCActivity).
         Intent intent=new Intent(context,ResultadoIMCActivity.class);
-        //Le pasamos al intent los valores de estatura y peso obtenidos.
+        //Le pasamos al intent los valores de estatura y peso obtenidos y el usuario logeado.
         intent.putExtra("peso",peso);
         intent.putExtra("estatura",estatura);
+        intent.putExtra("nombreUsuarioLogeado",nombreUsuarioLogeado);
         //Lanzamos la acción del Intent
         Log.d(getClass().getCanonicalName(),Constantes.LOG_INICIO_INTENT);
         activity.startActivity(intent);

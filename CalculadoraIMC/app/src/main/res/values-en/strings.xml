@@ -37,6 +37,8 @@
     <string name="mensaje_dialog_salirIMC">Do you  want close the session?</string>
     <string name="literal_No">No</string>
     <string name="literal_Si">Yes</string>
+    <string name="titulo_ordenar_IMC">Order by IMC</string>
+    <string name="titulo_ordenar_fecha">Order by date</string>
 
 
 </resources>

@@ -1,6 +1,9 @@
-package com.roberto.calculadoraimc;
+package com.roberto.calculadoraimc.entidades;
 
 import android.util.Log;
+
+import com.roberto.calculadoraimc.utilidades.Constantes;
+import com.roberto.calculadoraimc.excepciones.IMCException;
 
 /**
  * Created by PCCasa on 21/12/2016.

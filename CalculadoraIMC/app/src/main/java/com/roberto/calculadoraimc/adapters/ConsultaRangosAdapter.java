@@ -1,4 +1,4 @@
-package com.roberto.calculadoraimc;
+package com.roberto.calculadoraimc.adapters;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.roberto.calculadoraimc.R;
 
 /**
  * Created by PCCasa on 18/01/2017.

@@ -1,14 +1,17 @@
-package com.roberto.calculadoraimc;
+package com.roberto.calculadoraimc.activities;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+
+import com.roberto.calculadoraimc.dialogs.AlertDialogApp;
+import com.roberto.calculadoraimc.listeners.EscuchaBoton;
+import com.roberto.calculadoraimc.listeners.ListenerMenuItem;
+import com.roberto.calculadoraimc.listeners.ListenerRangosBoton;
+import com.roberto.calculadoraimc.R;
 
 public class MainActivity extends AppCompatActivity {
     /*
@@ -60,6 +63,10 @@ public class MainActivity extends AppCompatActivity {
         ListenerMenuItem listenerMenuItem=new ListenerMenuItem(this);
         //Asociamos el listener al menuItem.
         itemRangos.setOnMenuItemClickListener(listenerMenuItem);
+        //Obtenemos el menu item del consultado de historico de IMC.
+        MenuItem itemConsultaIMC=menu.getItem(1);
+        //Asociamos su listener al menuItem.
+        itemConsultaIMC.setOnMenuItemClickListener(listenerMenuItem);
         return true;
         }
 

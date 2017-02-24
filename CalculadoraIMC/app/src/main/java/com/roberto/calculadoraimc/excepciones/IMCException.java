@@ -1,4 +1,4 @@
-package com.roberto.calculadoraimc;
+package com.roberto.calculadoraimc.excepciones;
 
 /**
  * Created by PCCasa on 22/12/2016.

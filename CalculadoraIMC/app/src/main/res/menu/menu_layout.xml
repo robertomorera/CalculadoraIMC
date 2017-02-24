@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.roberto.calculadoraimc.MainActivity">
+    tools:context="com.roberto.calculadoraimc.activities.MainActivity">
 
     <item
         android:id="@+id/opcionWebView"
@@ -10,5 +10,12 @@
         android:icon="@mipmap/rangos"
         app:showAsAction="always"
         ></item>
+
+    <item
+        android:id="@+id/opcionListaRangos"
+        android:title="Historico IMC"
+        android:icon="@mipmap/ic_assessment_black_24dp"
+        app:showAsAction="always"
+    ></item>
 
 </menu>

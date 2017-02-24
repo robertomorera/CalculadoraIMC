@@ -38,5 +38,12 @@
     <string name="literal_Si">Si</string>
     <string name="literal_No">No</string>
     <string name="rangos_IMC">Rangos IMC</string>
+    <string name="registro_IMC">Registro IMC</string>
+    <string name="registro_IMC_correcto">El valor de IMC calculado se ha registrado correctamente en la BD.</string>
+    <string name="titulo_ordenar_IMC">Ordenar por IMC</string>
+    <string name="titulo_ordenar_fecha">Ordenar por fecha</string>
+
+
+
 
 </resources>

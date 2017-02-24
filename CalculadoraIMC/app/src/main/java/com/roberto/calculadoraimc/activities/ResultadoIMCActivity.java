@@ -1,12 +1,20 @@
-package com.roberto.calculadoraimc;
+package com.roberto.calculadoraimc.activities;
 
+import android.content.Context;
 import android.content.Intent;
-import android.content.res.ColorStateList;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.EditText;
+
+import com.roberto.calculadoraimc.entidades.CalculadoraIMC;
+import com.roberto.calculadoraimc.excepciones.IMCException;
+import com.roberto.calculadoraimc.listeners.ListenerMenuItem;
+import com.roberto.calculadoraimc.R;
 
 public class ResultadoIMCActivity extends AppCompatActivity {
 
@@ -66,6 +74,36 @@ public class ResultadoIMCActivity extends AppCompatActivity {
         asociaColorRango(IMC,caja_rango);
     }
 
+    /**
+     * Construye el menu de opciones de la barra de la activity
+     * se añade la opción de registrar los resultados  de IMC en la base de datos.
+     * @param menu
+     * @return
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+       //Inflamos con el layout de registro de IMC.
+        getMenuInflater().inflate(R.menu.menu_resultado_imc,menu);
+        //Obtenemos el menu item asociado al menu
+        MenuItem menuItem=menu.getItem(0);
+        //Creamos el listener
+        ListenerMenuItem listenerMenuItem=new ListenerMenuItem(this);
+        //Asociamos el listener al menuItem.
+        menuItem.setOnMenuItemClickListener(listenerMenuItem);
+        return true;
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        //Creamos una sharedPreferences del usuario;
+        SharedPreferences sharedPreferences=getSharedPreferences("loginUsuario", Context.MODE_PRIVATE);
+        sharedPreferences.getString("nombreUsuarioLogeado","");
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("nombreUsuarioLogeado",getIntent().getStringExtra("nombreUsuarioLogeado"));
+        editor.commit();
+        super.onBackPressed();
+    }
 
     /*
      Método encargado de asociar el IMC calculado con su valoracion

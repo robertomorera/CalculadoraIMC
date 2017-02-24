@@ -1,4 +1,4 @@
-package com.roberto.calculadoraimc;
+package com.roberto.calculadoraimc.listeners;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,6 +8,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.roberto.calculadoraimc.utilidades.Codificar;
+import com.roberto.calculadoraimc.R;
+import com.roberto.calculadoraimc.activities.MainActivity;
+import com.roberto.calculadoraimc.bbdd.BaseDatosCredenciales;
+import com.roberto.calculadoraimc.entidades.Usuario;
 
 /**
  * Created by PCCasa on 01/02/2017.
@@ -58,7 +64,7 @@ public class ListenerBotonesLogin implements View.OnClickListener {
         //Recuperamos el texto.
         String nombreUsuario = editTextNombreUsuario.getText().toString();
         //Comprobamos si el usuario ya está registrado en la base de datos.
-        BaseDatosCredenciales baseDatosCredenciales = new BaseDatosCredenciales(context,"credenciales", null, 1);
+        BaseDatosCredenciales baseDatosCredenciales = new BaseDatosCredenciales(context,"credenciales", null, 2);
         //Comprobamos si el campo viene informado.
         if (nombreUsuario.equals("")) {
             Toast.makeText(context,R.string.usuario_no_informado, Toast.LENGTH_SHORT).show();
@@ -114,7 +120,7 @@ public class ListenerBotonesLogin implements View.OnClickListener {
         }else {
             //Si el campo del usuario viene informado.
             //Comprobamos si existe en la base de datos.
-            BaseDatosCredenciales baseDatosCredenciales = new BaseDatosCredenciales(context, "credenciales", null, 1);
+            BaseDatosCredenciales baseDatosCredenciales = new BaseDatosCredenciales(context, "credenciales", null, 2);
             if (!baseDatosCredenciales.existeNombreUsuario(nombreUsuario)) {
                 Toast.makeText(context,R.string.usuario_no_existe, Toast.LENGTH_SHORT).show();
             } else {
@@ -133,8 +139,11 @@ public class ListenerBotonesLogin implements View.OnClickListener {
                         //Creamos una shared preferences para indicar que el usuario ya se ha logeado.
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putBoolean("usuarioLogeado", true);
+                        editor.putString("nombreUsuarioLogeado",nombreUsuario);
                         editor.commit();
                         Intent intent = new Intent(context, MainActivity.class);
+                        //Guardamos en el intent el usuario logeado.
+                        intent.putExtra("nombreUsuarioLogeado",nombreUsuario);
                         activity.startActivity(intent);
 
 
